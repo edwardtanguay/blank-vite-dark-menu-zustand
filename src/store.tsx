@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import create from 'zustand';
 import axios from 'axios';
+import { IJob, ISkill } from './interfaces';
 
 const jobsUrl = 'https://edwardtanguay.vercel.app/share/jobs.json';
 const skillsUrl = 'https://edwardtanguay.vercel.app/share/skills.json';
@@ -9,8 +10,8 @@ interface IStore {
 	appTitle: string;
 	loadJobs: () => void;
 	loadSkills: () => void;
-	jobs: [];
-	skills: [];
+	jobs: IJob[];
+	skills: ISkill[];
 }
 
 export const useStore = create<IStore>(

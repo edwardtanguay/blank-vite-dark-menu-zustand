@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react';
 import { createContext } from 'react';
 import axios from 'axios';
-import { IJob, ISkill } from './interfaces';
 
 const jobsUrl = 'https://edwardtanguay.vercel.app/share/jobs.json';
 const skillsUrl = 'https://edwardtanguay.vercel.app/share/skills.json';
