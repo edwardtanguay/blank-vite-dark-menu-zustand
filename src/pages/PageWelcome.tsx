@@ -4,8 +4,9 @@ import { useStore } from '../store';
 import { Helmet } from 'react-helmet';
 
 export const PageWelcome = () => {
-	const { jobs, skills } = useContext(AppContext);
-	const {appTitle} = useStore((state) => state);
+	const { skills } = useContext(AppContext);
+	const {appTitle, jobs, loadJobs} = useStore((state) => state);
+
 
 	return (
 		<div className="pageWelcome">
@@ -16,3 +17,4 @@ export const PageWelcome = () => {
 		</div>
 	);
 };
+

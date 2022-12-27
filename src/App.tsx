@@ -1,10 +1,18 @@
 import './App.scss';
+import { useStore } from './store';
 import { NavLink, Routes, Route, Navigate } from 'react-router-dom';
 import { PageWelcome } from './pages/PageWelcome';
 import { PageInfo } from './pages/PageInfo';
 import { PageAbout } from './pages/PageAbout';
+import { useEffect } from 'react';
 
 function App() {
+	const {loadJobs} = useStore((state) => state);
+	
+	useEffect(() => {
+		loadJobs();
+	}, []);
+	
 	return (
 		<div className="App">
 			<h1>Info Site</h1>
