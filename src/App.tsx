@@ -3,13 +3,11 @@ import { NavLink, Routes, Route, Navigate } from 'react-router-dom';
 import { PageWelcome } from './pages/PageWelcome';
 import { PageInfo } from './pages/PageInfo';
 import { PageAbout } from './pages/PageAbout';
-import { LoadStore } from './store';
 
 function App() {
 	
 	return (
 		<div className="App">
-			<LoadStore/>
 			<h1>Info Site</h1>
 			<nav>
 				<NavLink to="/welcome">Welcome</NavLink>
