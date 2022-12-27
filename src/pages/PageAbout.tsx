@@ -1,14 +1,13 @@
-import { useContext } from 'react';
-import { AppContext } from '../AppContext';
+import { useStore } from '../store';
 import { Helmet } from 'react-helmet';
 
 export const PageAbout = () => {
-	const { appTitle } = useContext(AppContext);
+	const store = useStore((state) => state);
 
 	return (
 		<div className="pageAbout">
 			<Helmet>
-				<title>{appTitle} - About</title>
+				<title>{store.appTitle} - About</title>
 			</Helmet>
 			<p>This is the about page.</p>
 		</div>
