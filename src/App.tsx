@@ -1,20 +1,15 @@
 import './App.scss';
-import { useStore } from './store';
 import { NavLink, Routes, Route, Navigate } from 'react-router-dom';
 import { PageWelcome } from './pages/PageWelcome';
 import { PageInfo } from './pages/PageInfo';
 import { PageAbout } from './pages/PageAbout';
-import { useEffect } from 'react';
+import { LoadStore } from './store';
 
 function App() {
-	const {loadJobs} = useStore((state) => state);
-	
-	useEffect(() => {
-		loadJobs();
-	}, []);
 	
 	return (
 		<div className="App">
+			<LoadStore/>
 			<h1>Info Site</h1>
 			<nav>
 				<NavLink to="/welcome">Welcome</NavLink>

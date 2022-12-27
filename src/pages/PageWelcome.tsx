@@ -1,12 +1,8 @@
-import { useContext } from 'react';
-import { AppContext } from '../AppContext';
 import { useStore } from '../store';
 import { Helmet } from 'react-helmet';
 
 export const PageWelcome = () => {
-	const { skills } = useContext(AppContext);
-	const {appTitle, jobs, loadJobs} = useStore((state) => state);
-
+	const {appTitle, jobs, skills} = useStore((state) => state);
 
 	return (
 		<div className="pageWelcome">
