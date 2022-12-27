@@ -39,11 +39,11 @@ export const useStore = create<IStore>(
 );
 
 export const LoadStore = () => {
-	const { loadJobs, loadSkills } = useStore((state) => state);
+	const store = useStore((state) => state);
 
 	useEffect(() => {
-		loadJobs();
-		loadSkills();
+		store.loadJobs();
+		store.loadSkills();
 	}, []);
 
 	return <></>;
